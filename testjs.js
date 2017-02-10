@@ -178,7 +178,8 @@
     var {foo: baz} = {foo: 'aaa', bar: 'bbb'};
     baz // "aaa"
     //对象的解构赋值的内部机制，是先找到同名属性，然后再赋给对应的变量。真正被赋值的是后者，而不是前者。
-    let { first: f, last: l } =  { first: 'hello', last: 'world' };;
+    let {first: f, last: l} =  {first: 'hello', last: 'world'};
+    ;
     f // 'hello'
     l // 'world'
 
@@ -188,4 +189,94 @@
     let foo;
     let {foo} = {foo: 1}; // SyntaxError: Duplicate declaration "foo"
 
+}
+
+{
+
+    let object = new Object();
+
+    let person = {
+        name: 'lihang',
+        gander: 33,
+        isdog: true,
+        year: null
+
+    };
+    person.test = function (x) {
+        return x;
+    }
+
+    let isdog = person.isdog;
+
+    let year = person.year;
+
+    let name2 = person.name;
+
+    let gander = person.gander;
+
+    let person2 = person[person];
+
+    let test = person.test(544);
+
+    let valueOf = person.valueOf();
+
+    let b2 = person.hasOwnProperty("isgood");
+
+
+    let str = "Fasfasdd";
+    let ba = {str};
+    let num = 0o11;
+
+    let baz = {person: true};
+
+}
+
+{
+
+
+    function foo({x, y = 5}) {
+        console.log(x, y);
+    }
+
+    foo({}) // undefined, 5
+    foo({x: 1}) // 1, 5
+    foo({x: 1, y: 2}) // 1, 2
+    foo() // TypeError: Cannot read property 'x' of undefined
+
+}
+{
+
+
+    function add(...values) {
+        let sum = 0;
+
+        for (var val of values) {
+            sum += val;
+        }
+        return sum;
+    }
+
+    add(2, 5, 3) // 10
+}
+
+{
+
+    let baz = {
+        abc: "fff"
+    };
+
+    //默认会有一个name属性，返回自己的名字
+    let name3 = baz.name;
+
+}
+
+{
+
+    // 报错
+    function doSomething(value = 0o70) {
+        'use strict'
+
+        return value;
+
+    }
 }

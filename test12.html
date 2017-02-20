@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js">
+    </script>
+
+    <script>
+
+        function myfunction() {
+            // $('#h01').attr("style","color:red").html('hello jquery').action();
+            $('h1.h01').attr("style", "color:red").html('hello jquery');
+
+        }
+        //这是为了防止文档在完全加载（就绪）之前运行 jQuery 代码。
+        // 如果在文档没有完全加载之前就运行函数，操作可能失败。下面是两个具体的例子：
+        //试图隐藏一个不存在的元素
+        // 获得未完全加载的图像的大小
+
+        //$(document).ready(myfunction);
+        // 简洁写法（与以上写法效果相同
+        $(myfunction);
+    </script>
+
+</head>
+<body>
+<h1 class="h01"></h1>
+
+
+</body>
+</html>

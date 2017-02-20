@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<h1 title="mytitle">我的第一个页面</h1>
+<p id="demo">我的第一个段落。</p>
+
+<button onclick="myFunction(1,2)">点我！</button>
+<button onclick="message()">错误！</button>
+
+<button onclick='getElementById("demo").innerHTML=Date()'>The time is?</button>
+
+
+<form name="myForm" action="demo_form.asp" onsubmit="return validateForm()" method="post">
+    First name:<input type="text" name="fname">
+    <input type="submit" value="111">
+</form>
+
+<button onclick="document.getElementById('demo').style.color ='blue'"></button>
+
+<script>
+
+
+    function validateForm() {
+
+        let value = document.forms["myForm"]['fname'].value();
+        if (value == null || value == "") {
+            alert("First name must be filled out");
+            return false;
+        } else {
+            alert("good");
+        }
+
+    }
+
+    function myFunction(x, y) {
+        let add2 = add(x, y);
+        debugger;
+        document.getElementById("demo").innerHTML = add2;
+
+    }
+
+
+    function add(x, y) {
+        return x + y;
+    }
+
+
+    let txt = "";
+    function message() {
+        throw   new NotFoundError;
+    }
+</script>
+
+
+</body>
+</html>

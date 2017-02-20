@@ -280,3 +280,87 @@
 
     }
 }
+
+{
+    undefined
+    null
+    Number
+    Boolean
+    Object
+    String
+
+    if (typeof  doSomething("ff") != "undefined") {
+
+
+    }
+    typeof null;
+
+}
+
+
+{
+    function createXHR() {
+        if (typeof XMLHttpRequest != 'undefined') {
+            return new XMLHttpRequest();
+        } else if (typeof ActiveXObject != 'undefined') {
+            if (typeof arguments.callee.activeXString != 'string') {
+                var versions = ['MSXML2.XMLHttp.6.0', 'MSXML2.XMLHttp.3.0', 'MSXML2.XMLHttp'], i, len;
+                for (i = 0, len = versions.length; i < len; i++) {
+                    try {
+                        new ActiveXObject(versions[i]);
+                        arguments.callee.activeXString = versions[i];
+                    } catch (e) {
+
+                    }
+                }
+            }
+            return new ActiveXObject(arguments.callee.activeXString);
+        } else {
+            throw new Error('No XHR object available');
+        }
+    }
+}
+
+{
+
+    let xhr = createXHR();
+
+    xhr.open('GET', 'example.php');
+
+    xhr.setRequestHeader('Content-Type', 'text/plain');
+    xhr.send(null);
+    xhr.onreadystatechange = function () {
+
+        localStorage.key('ff');
+        localStorage.setItem('fff', "21312");
+
+    };
+
+    localStorage.length
+
+
+    let a = function isVdaennaing() {
+        return "a";
+    }
+
+    function test() {
+        var name = 'tg';
+
+        function test2() {
+            var age = 10;
+            console.log(name);  // "tg"
+        }
+
+        console.log(age);  // Uncaught ReferenceError: age is not defined
+    }
+
+    test();
+
+
+}
+
+{
+    <script>
+
+    </script>;
+}

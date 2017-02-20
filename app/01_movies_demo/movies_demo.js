@@ -1,17 +1,11 @@
 /**
- * Sample React Native App
- *程序入口
+ * Created by Administrator on 2017/2/15.
  */
-
-
-import './app/index';
-
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
  */
 
-/*
 import React, {
     Component,
 } from 'react';
@@ -27,7 +21,7 @@ import {
 
 var REQUEST_URL = 'https://raw.githubusercontent.com/facebook/react-native/master/docs/MoviesExample.json';
 
-class SampleAppMovies extends Component {
+export default class SampleAppMovies extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -125,6 +119,3 @@ var styles = StyleSheet.create({
         backgroundColor: '#F5FCFF',
     },
 });
-
-AppRegistry.registerComponent('rnDemo', () => SampleAppMovies);
-*/

@@ -1,12 +1,13 @@
 /**
  * Created by Administrator on 2017/2/10.
  */
-import React, {Component} from 'react';
-import {AppRegistry, Text}from 'react-native';
+
+import React, {Component} from "react";
+import {AppRegistry} from "react-native";
+
+//import HelloWorld from "./00_helloworld_demo/HelloWorld";
+import movies from "./01_movies_demo/movies_demo";
 
 
-import HelloWorld from "./app/00_helloworld_demo/HelloWorld";
-
-
-
-AppRegistry.registerComponent('HelloWorld', () => HelloWorld);
+//AppRegistry.registerComponent('rnDemo', () => HelloWorld);
+AppRegistry.registerComponent('rnDemo', () => movies);
